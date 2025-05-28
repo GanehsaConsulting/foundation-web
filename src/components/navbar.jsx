@@ -3,16 +3,36 @@ import Link from "next/link";
 import ThemeSwitch from "./theme-switch";
 import { navItems } from "@/app/system";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export const Navbar = ({ children }) => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
     const path = usePathname()
+
     const isActive = (href) => {
         return href === "/" ? path === "/" : path.startsWith(href)
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsScrolled(scrollPosition > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <nav className={`navbar min-h-[55px] h-[55px] border-b shadow`}>
+            <nav className={`fixed top-0 z-999 navbar min-h-[55px] h-[55px] duration-300 ease-in-out transition-all w-full border-b
+                          ${isScrolled && "bg-brand-neutral/80 shadow backdrop-blur-md"}
+                          ${isActive("/") && "text-white border-b border-b-muted-foreground/50"}
+                `}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
