@@ -1,9 +1,9 @@
-import { Fredoka, Inter, Lexend, Montserrat, Nunito, Poppins, } from "next/font/google";
+import { Fredoka, Inter, Lexend, Montserrat, Nunito, Outfit, Poppins, } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "next-themes";
 
-const fredoka = Lexend({
+const fredoka = Outfit({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
 });

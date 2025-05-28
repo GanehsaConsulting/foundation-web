@@ -1,6 +1,6 @@
 export const navItems = [
     { label: "Beranda", href: "/" },
-    { label: "Tentang Kami", href: "/tentang" },
+    { label: "Tentang Kami", href: "/tentang-kami" },
     { label: "Program", href: "/program" },
     { label: "Artikel & Aktifitas", href: "/artikel" },
     { label: "Kontak", href: "/kontak" }

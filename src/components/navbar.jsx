@@ -12,7 +12,7 @@ export const Navbar = ({ children }) => {
 
     return (
         <>
-            <nav className={`navbar min-h-[55px] h-[55px] border-b`}>
+            <nav className={`navbar min-h-[55px] h-[55px] border-b shadow`}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ export const Navbar = ({ children }) => {
                                 >
                                     {i.label}
                                     {isActive(i.href) && (
-                                        <div className="absolute left-1/2 -bottom-[13px] transform -translate-x-1/2 w-5 h-1 rounded-full bg-brand-main" />
+                                        <div className="absolute left-1/2 -bottom-[12px] transform -translate-x-1/2 w-5 h-[3px] rounded-full bg-brand-main" />
                                     )}
                                 </Link>
                             </li>
