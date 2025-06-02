@@ -10,6 +10,8 @@ export const Navbar = ({ children }) => {
 
     const path = usePathname()
 
+    const whitePaths = ["/", "/post"];
+
     const isActive = (href) => {
         return href === "/" ? path === "/" : path.startsWith(href)
     };
@@ -29,9 +31,9 @@ export const Navbar = ({ children }) => {
 
     return (
         <>
-            <nav className={`fixed top-0 z-999 navbar min-h-[55px] h-[55px] duration-300 ease-in-out transition-all w-full border-b
-                          ${isScrolled && "bg-brand-neutral/80 shadow backdrop-blur-md"}
-                          ${isActive("/") && "text-white border-b border-b-muted-foreground/50"}
+            <nav className={`fixed top-0 z-999 navbar min-h-[55px] h-[55px] duration-300 ease-in-out transition-all w-full
+                          ${isScrolled && "bg-brand-neutral/80 shadow backdrop-blur-md border-b"}
+                          ${whitePaths.includes(path) && !isScrolled && "!text-white border-none"}
                 `}>
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -66,7 +68,7 @@ export const Navbar = ({ children }) => {
                                 >
                                     {i.label}
                                     {isActive(i.href) && (
-                                        <div className="absolute left-1/2 -bottom-[12px] transform -translate-x-1/2 w-5 h-[3px] rounded-full bg-brand-main" />
+                                        <div className={`${isScrolled ? "w-5 h-[3px]" : "-translate-y-3 w-[5px] h-[5px]"} absolute left-1/2 -bottom-[12px] transform -translate-x-1/2  rounded-full bg-brand-main duration-200`} />
                                     )}
                                 </Link>
                             </li>
