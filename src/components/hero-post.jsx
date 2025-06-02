@@ -74,7 +74,7 @@ export const HeroPost = () => {
                     ))}
 
                     {/* Linear Blur Effect */}
-                    <div className="linear-blur h-60 !rounded-b-main"></div>
+                    <div className="linear-blur h-70 !rounded-b-main"></div>
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
 

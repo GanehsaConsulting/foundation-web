@@ -235,7 +235,7 @@ body {
 }
 
 .margin {
-  @apply mx-5 md:mx-24;
+  @apply mx-5 md:mx-16;
 }
 
 .linear-blur {
