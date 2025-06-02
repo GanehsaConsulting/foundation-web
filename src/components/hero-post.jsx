@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export const HeroPost = () => {
-    const articles = DataArticles.new.slice(0, 5); // Ambil 5 artikel pertama
+    const articles = DataArticles.slice(0, 5); // Ambil 5 artikel pertama
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -56,7 +56,7 @@ export const HeroPost = () => {
 
     return (
         <>
-            <main className="min-h-screen max-h-screen overflow-hidden">
+            <main className="min-h-screen max-h-screen overflow-hidden rounded-b-main">
                 <section className="relative h-screen w-full">
                     {/* Background Images dengan Fading Effect */}
                     {articles.map((article, index) => (
@@ -64,10 +64,10 @@ export const HeroPost = () => {
                             key={index}
                             width={1920}
                             height={1080}
-                            className={`w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                            className={`w-full h-full object-cover object-center rounded-b-main absolute inset-0 transition-opacity duration-1000 ease-in-out ${
                                 index === currentIndex ? 'opacity-100' : 'opacity-0'
                             }`}
-                            src={article.thumbnailImg}
+                            src={article.thumbnailImage}
                             alt={article.title}
                             priority={index === 0}
                         />
@@ -76,9 +76,9 @@ export const HeroPost = () => {
                     {/* Linear Blur Effect */}
                     <div className="linear-blur h-70 !rounded-b-main"></div>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-b-main"></div>
 
-                    <div className="absolute inset-0 h-50 bg-gradient-to-b from-black/50 via-black/10 to-transparent"></div>
+                    <div className="absolute inset-0 h-50 bg-gradient-to-b from-black/50 via-black/10 to-transparent rounded-b-main"></div>
 
                     <div className="absolute bottom-0 flex flex-col text-white p-6">
                         {/* Content dengan Fading Effect */}
@@ -90,10 +90,10 @@ export const HeroPost = () => {
                             }`}
                         >
                             <div className="text-sm font-semibold bg-brand-main px-2 py-1 rounded-full w-fit mb-2">
-                                {currentArticle.categories}
+                                {currentArticle.category}
                             </div>
                             <h1 className="text-4xl md:text-5xl font-bold mb-4">{currentArticle.title}</h1>
-                            <p className="text-lg opacity-60 mb-6">{currentArticle.exerp}</p>
+                            <p className="text-lg opacity-60 mb-6">{currentArticle.excerpt}</p>
                         </div>
 
                         

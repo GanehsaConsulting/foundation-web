@@ -64,7 +64,10 @@ export const Navbar = ({ children }) => {
                             <li key={idx}>
                                 <Link
                                     href={i.href}
-                                    className={`${isActive(i.href) && "text-brand-main font-bold"} hover:text-brand-main relative`}
+                                    className={`
+                                        ${isActive(i.href) && "text-brand-main font-bold"}
+                                        ${isActive(i.href) && !isScrolled  && "brightness-140"}
+                                       hover:text-brand-main relative`}
                                 >
                                     {i.label}
                                     {isActive(i.href) && (
