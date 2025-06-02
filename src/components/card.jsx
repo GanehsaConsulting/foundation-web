@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export const Card = ({ article }) => {
     const isActivity = article.category === "Activity";
-    const customSlug = isActivity ? "/activity/" + slugify(article.title) : "/artikel/" + slugify(article.title);
+
     return (
         <Link
-            href={customSlug}
+            href={"/post/" + slugify(article.title)}
             className={`${isActivity && "col-span-2"} flex flex-col gap-4 bg-brand-neutral rounded-main relative duration-300 ease-in-out hover:scale-101 origin-bottom hover:shadow-custom group overflow-hidden`}>
             <img
                 width={500}
