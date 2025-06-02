@@ -283,3 +283,12 @@ body {
         rgba(255, 255, 255, 1) 100%
     );
 }
+.carousel2 {
+    display: inline-flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

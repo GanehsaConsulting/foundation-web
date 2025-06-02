@@ -1,9 +1,15 @@
 import { formatDate } from "@/app/helper/formatDateTime";
+import { slugify } from "@/app/helper/slugify";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Card = ({ article }) => {
+    const isActivity = article.category === "Activity";
+    const customSlug = isActivity ? "/activity/" + slugify(article.title) : "/artikel/" + slugify(article.title);
     return (
-        <div className="flex flex-col gap-4 bg-brand-neutral rounded-main relative duration-300 ease-in-out hover:scale-101 origin-bottom hover:shadow-custom group overflow-hidden">
+        <Link
+            href={customSlug}
+            className={`${isActivity && "col-span-2"} flex flex-col gap-4 bg-brand-neutral rounded-main relative duration-300 ease-in-out hover:scale-101 origin-bottom hover:shadow-custom group overflow-hidden`}>
             <img
                 width={500}
                 height={500}
@@ -12,12 +18,12 @@ export const Card = ({ article }) => {
                 alt={article.title}
             />
             <div className="linear-blur h-50 !rounded-b-main"></div>
-            
+
             {/* Category badge - aligned to start */}
             <div className={`${article.category === "Activity" && "bg-brand-accent"} absolute top-4 left-4 text-xs font-semibold bg-brand-main px-2 py-1 rounded-full w-fit h-fit shadow-custom text-white`}>
                 {article.category}
             </div>
-            
+
             {/* Bottom content - aligned to start with consistent height */}
             <div className="absolute bottom-0 left-0 w-full p-4 text-white z-10 bg-gradient-to-t from-black/50 via-black/10 to-transparent rounded-b-main">
                 <div className="flex flex-col items-start justify-end min-h-[80px] gap-1">
@@ -29,6 +35,6 @@ export const Card = ({ article }) => {
                     </p>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }

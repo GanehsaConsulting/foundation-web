@@ -1,6 +1,6 @@
 export const Pills = ({ pills }) => {
     return (
-        <div className="flex flex-wrap gap-2">
+        <div className="carousel w-full gap-2">
             {pills.map((pill, index) => (
                 <span
                     key={index}
