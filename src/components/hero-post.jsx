@@ -56,7 +56,7 @@ export const HeroPost = () => {
 
     return (
         <>
-            <main className="min-h-screen max-h-screen overflow-hidden rounded-b-main">
+            <main className="min-h-screen max-h-screen overflow-hidden">
                 <section className="relative h-screen w-full">
                     {/* Background Images dengan Fading Effect */}
                     {articles.map((article, index) => (
@@ -64,7 +64,7 @@ export const HeroPost = () => {
                             key={index}
                             width={1920}
                             height={1080}
-                            className={`w-full h-full object-cover object-center rounded-b-main absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                            className={`w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-1000 ease-in-out ${
                                 index === currentIndex ? 'opacity-100' : 'opacity-0'
                             }`}
                             src={article.thumbnailImage}
@@ -76,9 +76,9 @@ export const HeroPost = () => {
                     {/* Linear Blur Effect */}
                     <div className="linear-blur h-70 !rounded-b-main"></div>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-b-main"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
 
-                    <div className="absolute inset-0 h-50 bg-gradient-to-b from-black/50 via-black/10 to-transparent rounded-b-main"></div>
+                    <div className="absolute inset-0 h-50 bg-gradient-to-b from-black/50 via-black/10 to-transparent"></div>
 
                     <div className="absolute bottom-0 flex flex-col text-white p-6">
                         {/* Content dengan Fading Effect */}

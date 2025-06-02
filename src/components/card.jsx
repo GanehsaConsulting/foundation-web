@@ -11,10 +11,10 @@ export const Card = ({ article }) => {
                 src={article.thumbnailImage}
                 alt={article.title}
             />
-            <div className="linear-blur h-70 !rounded-b-main"></div>
+            <div className="linear-blur h-50 !rounded-b-main"></div>
             
             {/* Category badge - aligned to start */}
-            <div className={`${article.categories === "Activity" && "bg-brand-accent"} absolute top-4 left-4 text-xs font-semibold bg-brand-main px-2 py-1 rounded-full w-fit h-fit shadow-custom text-white`}>
+            <div className={`${article.category === "Activity" && "bg-brand-accent"} absolute top-4 left-4 text-xs font-semibold bg-brand-main px-2 py-1 rounded-full w-fit h-fit shadow-custom text-white`}>
                 {article.category}
             </div>
             

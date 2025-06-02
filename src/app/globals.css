@@ -9,7 +9,7 @@
   /* Custom Brand Colors with light-dark() function */
   --color-brand-main: light-dark(#bb7240, #CA7842);
   --color-brand-accent: light-dark(#7a9068, #b2cd9c);
-  --color-brand-base: light-dark(#5f6048, #f0f2bd);
+  --color-brand-base: light-dark(#f0f2bd, #5f6048);
   --color-brand-neutral: light-dark(#f1f1f1, #252525);
   --color-brand-neutral-secondary: light-dark(#e3e3e3, #333333);
   --color-brand-gray: light-dark(#f3f4f5, #1a1a1a);
