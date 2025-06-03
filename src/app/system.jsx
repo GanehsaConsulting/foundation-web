@@ -6,61 +6,91 @@ export const navItems = [
     { label: "Kontak", href: "/kontak" }
 ];
 
-export const identity = {
-    name: "Yayasan Piring Harapan",
-    tagline: "Setiap Anak Berhak Makan dengan Layak",
-    description:
-        "Yayasan Piring Harapan adalah organisasi nirlaba yang menyediakan program makan gratis bagi siswa SD hingga SMA dari keluarga kurang mampu. Kami percaya bahwa gizi yang cukup adalah fondasi dari pendidikan dan masa depan yang cerah.",
-    founded: "2021",
-    location: "Jakarta Selatan, Indonesia",
-    legal_number: "AHU-0023456.AH.01.04.Tahun 2021",
-    programs: [
-        {
-            title: "Makan Bareng Gratis",
-            description:
-                "Program inti kami menyediakan makan siang bergizi secara gratis di sekolah-sekolah mitra, mulai dari SD hingga SMA. Tujuannya adalah untuk mendukung tumbuh kembang anak dan mencegah kelaparan di lingkungan sekolah.",
-            image: "/images/program-makan-bareng.jpg",
-        },
-        {
-            title: "Dapur Komunitas",
-            description:
-                "Kami bekerja sama dengan warga lokal untuk membangun dapur komunitas di area sekitar sekolah. Dapur ini dikelola bersama oleh relawan dan orang tua murid.",
-            image: "/images/dapur-komunitas.jpg",
-        },
-        {
-            title: "Donasi Piring Harapan",
-            description:
-                "Kampanye penggalangan dana terbuka untuk mendukung pembiayaan bahan makanan, operasional dapur, dan distribusi makanan ke sekolah-sekolah.",
-            image: "/images/donasi.jpg",
-        },
-    ],
-    contact: {
-        email: "info@piringharapan.org",
-        phone: "+62 812 3456 7890",
-        whatsapp: "https://wa.me/6281234567890",
-        address: "Jl. Kebahagiaan No.1, Jakarta Selatan",
-        instagram: "@piringharapan",
-        facebook: "fb.com/piringharapan",
-    },
+// Hero Section
+const heroSection = {
+  title: "Makan Gratis, Masa Depan Berkualitas",
+  subtitle: "Program makan siang gratis untuk siswa SD hingga SMA/SMK sebagai upaya mendukung pendidikan dan kesehatan anak Indonesia.",
+  buttonText: "Lihat Program",
+  imageUrl: "/images/hero-anak-makan.jpg"
 };
 
-// site.config.ts atau constants.ts
+// Keunggulan Program
+const keunggulanSection = [
+  {
+    icon: "🍛",
+    title: "Gizi Seimbang",
+    description: "Menu harian disusun oleh ahli gizi untuk mendukung tumbuh kembang anak."
+  },
+  {
+    icon: "🏫",
+    title: "Tepat Sasaran",
+    description: "Diberikan kepada siswa dari keluarga prasejahtera yang diverifikasi oleh sekolah dan dinas sosial."
+  },
+  {
+    icon: "🤝",
+    title: "Kolaboratif",
+    description: "Bekerja sama dengan warung lokal dan kantin sekolah untuk pemberdayaan ekonomi."
+  },
+  {
+    icon: "📊",
+    title: "Terukur",
+    description: "Pelaporan data distribusi makanan dilakukan setiap minggu melalui sistem terintegrasi."
+  }
+];
 
-export const siteMeta = {
-    title: "Yayasan Piring Harapan",
-    description: "Program makan bareng gratis untuk siswa SD hingga SMA dari keluarga kurang mampu.",
-    url: "https://piringharapan.org",
-    ogImage: "/images/og-image.jpg"
+// Tentang Yayasan
+const tentangSection = {
+  name: "Yayasan Aksata Cendekia Nusantara",
+  established: 2021,
+  mission: "Mewujudkan generasi sehat dan cerdas melalui pemenuhan gizi bagi pelajar secara berkelanjutan.",
+  vision: "Indonesia tanpa kelaparan di bangku sekolah.",
+  description: "Kami adalah mitra pelaksana resmi dari program pemerintah untuk makan gratis siswa SD–SMA/SMK, dengan fokus pada transparansi, keberlanjutan, dan keberpihakan pada yang membutuhkan."
 };
 
-
-export const heroSection = {
-    headline: "Makan Bareng Gratis untuk Masa Depan Cerah",
-    subheadline: "Kami menyediakan makan siang bergizi gratis untuk siswa SD hingga SMA yang membutuhkan.",
-    ctaText: "Dukung Sekarang",
-    ctaHref: "/donasi",
-    image: "/images/hero.jpg"
+// Program
+const programSection = {
+  name: "Program Makan Gratis Pelajar",
+  target: "Siswa SD hingga SMA/SMK dari keluarga tidak mampu",
+  activeCities: ["Jakarta Timur", "Bekasi", "Yogyakarta", "Bandung"],
+  currentBeneficiaries: 1280,
+  goal2026: 5000,
+  menuType: "Nasi + lauk + sayur + buah + air mineral",
+  schedule: "Senin – Jumat, pukul 11.00 – 13.00"
 };
+
+// Lokasi Aktif
+const lokasiSection = [
+  {
+    kota: "Jakarta Timur",
+    sekolah: 12,
+    siswa: 380
+  },
+  {
+    kota: "Bekasi",
+    sekolah: 8,
+    siswa: 300
+  },
+  {
+    kota: "Yogyakarta",
+    sekolah: 6,
+    siswa: 260
+  },
+  {
+    kota: "Bandung",
+    sekolah: 5,
+    siswa: 340
+  }
+];
+
+// Kontak
+const kontakSection = {
+  alamat: "Jl. H. Nawi No. 88, Jakarta Selatan, DKI Jakarta",
+  telepon: "021-1234567",
+  whatsapp: "0812-3456-7890",
+  email: "info@aksatacendekia.or.id",
+  instagram: "@aksata.cendekia"
+};
+
 
 export const footer = {
     description: "Yayasan Piring Harapan adalah organisasi nirlaba yang membantu siswa dari keluarga prasejahtera mendapatkan makanan bergizi setiap hari.",

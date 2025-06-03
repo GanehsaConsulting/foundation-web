@@ -17,6 +17,7 @@ export default function ArtikelPage() {
     return (
         <>
             <HeroPost />
+
             <div className="margin mt-10 mb-5 space-y-3">
                 <div className="grid grid-cols-10 gap-2">
                     <div className="col-span-9">
@@ -36,6 +37,11 @@ export default function ArtikelPage() {
                 ))}
 
             </div>
+            
+            <div className="margin my-10">
+                <PaginationNumber />
+            </div>
+
             <CardCarousel
                 articles={activity}
                 showTopLabel={true}
@@ -53,9 +59,7 @@ export default function ArtikelPage() {
                 viewAllButtonHref="/artikel"
             />
 
-            {/* <div className="margin my-10">
-                <PaginationNumber />
-            </div> */}
+
         </>
     );
 }

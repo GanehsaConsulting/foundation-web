@@ -59,7 +59,7 @@ export const Navbar = ({ children }) => {
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="flex gap-5 text-sm px-1">
                         {navItems.map((i, idx) => (
                             <li key={idx}>
                                 <Link
@@ -71,7 +71,7 @@ export const Navbar = ({ children }) => {
                                 >
                                     {i.label}
                                     {isActive(i.href) && (
-                                        <div className={`${isScrolled ? "w-5 h-[3px]" : "-translate-y-3 w-[5px] h-[5px]"} absolute left-1/2 -bottom-[12px] transform -translate-x-1/2  rounded-full bg-brand-main duration-200`} />
+                                        <div className={`${isScrolled ? "w-5 h-[3px]" : "-translate-y-3 w-[5px] h-[5px]"} absolute left-1/2 -bottom-[20px] transform -translate-x-1/2  rounded-full bg-brand-main duration-200`} />
                                     )}
                                 </Link>
                             </li>

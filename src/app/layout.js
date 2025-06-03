@@ -2,6 +2,7 @@ import { Fredoka, Inter, Lexend, Montserrat, Nunito, Outfit, Poppins, } from "ne
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "next-themes";
+import { Footer } from "@/components/footer";
 
 const fredoka = Outfit({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           <Navbar>
             {children}
           </Navbar>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

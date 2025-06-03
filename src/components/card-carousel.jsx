@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowLeftIcon, ArrowRight, ArrowRightIcon, ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const CardCarousel = ({
     articles = [],
@@ -28,6 +29,8 @@ export const CardCarousel = ({
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
     const carouselRef = useRef(null);
+
+    const route = useRouter();
 
     // Check scroll position
     const checkScrollPosition = () => {
@@ -71,6 +74,7 @@ export const CardCarousel = ({
                             {topLabelTitle}
                         </h1>
                         <Button
+                            onClick={() => route.push(viewAllButtonHref)}
                             size={"none"}
                             className={`text-brand-main ${viewAllButtonClassName} !p-0 !hover:p-5`}
                             variant={"ghost"}
@@ -119,25 +123,13 @@ export const CardCarousel = ({
                 style={{ scrollBehavior: 'smooth' }}
             >
                 {articles.map((article, idx) => {
-                    const isActivity = article.category === "Activity";
-                    const customSlug = isActivity
-                        ? "/activity/" + slugify(article.title)
-                        : "/artikel/" + slugify(article.title);
-
-                    // const firstItem = idx === 0
-                    //     ? `${containerPadding.desktop} ${containerPadding.mobile.split(' ')[0]}`
-                    //     : "";
-                    // const lastItem = idx === articles.length - 1
-                    //     ? `${containerPadding.desktop.split(' ')[1]} ${containerPadding.mobile.split(' ')[1]}`
-                    //     : "";
-
                     const firstItem = idx === 0 ? "md:ml-16 ml-5" : "";
                     const lastItem = idx === articles.length - 1 ? "md:mr-16 mr-5" : "";
 
                     return (
                         <Link
                             key={article.id || idx}
-                            href={customSlug}
+                            href={"/post/" + slugify(article.title)}
                             className={` ${firstItem} ${lastItem} flex flex-col gap-4 bg-brand-neutral rounded-main relative duration-300 ease-in-out hover:scale-99 hover:shadow-custom group overflow-hidden`}
                             style={{ minWidth: cardMinWidth }}
                         >
