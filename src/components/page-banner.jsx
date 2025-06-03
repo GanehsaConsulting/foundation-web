@@ -6,7 +6,7 @@ export default function PageBanner({
     divider = false,
 }) {
     return (
-        <section className="margin flex flex-col items-center justify-center py-10 md:mt-15">
+        <section className="margin flex flex-col items-center justify-center py-10 md:mt-15 mt-10">
             <div className="text-3xl font-bold mb-2 text-center flex items-center gap-2">
                 {highlight && <span className="text-brand-main">{highlight}</span>}{" "}
                 {divider === true && (
@@ -18,7 +18,7 @@ export default function PageBanner({
                 {!highlight && !accent && title}
             </div>
             {description && (
-                <p className="max-w-xl text-center text-neutral-600">{description}</p>
+                <p className="max-w-xl text-center text-muted-foreground">{description}</p>
             )}
         </section>
     )

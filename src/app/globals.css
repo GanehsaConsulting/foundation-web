@@ -13,6 +13,7 @@
   --color-brand-neutral: light-dark(#f1f1f1, #252525);
   --color-brand-neutral-secondary: light-dark(#e3e3e3, #333333);
   --color-brand-gray: light-dark(#f3f4f5, #1a1a1a);
+  --color-brand-invert: light-dark(#252525, #f1f1f1);
 
   /* Additional semantic brand colors */
   --color-brand-surface: light-dark(#ffffff, #1c1c1c);

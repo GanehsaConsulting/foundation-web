@@ -10,8 +10,8 @@ export const AbotUs = () => {
                     alt="" />
                 <div className="flex flex-col justify-center gap-3">
                     <Title
-                        highlight="Tentang"
-                        accent="Kami"
+                        highlight="Yayasan Aksata "
+                        accent="Cendekia Nusantara"
                     />
 
                     <div className="-ml-20 bg-brand-base/50 backdrop-blur-md p-4 rounded-main shadow-custom space-y-3">

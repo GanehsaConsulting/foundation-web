@@ -1,11 +1,19 @@
-import { FaBowlFood, FaPeopleRoof, FaPeopleCarryBox, FaCheckDouble } from "react-icons/fa6";
+import {
+    FaBowlFood,
+    FaPeopleRoof,
+    FaPeopleCarryBox,
+    FaCheckDouble,
+    FaBowlRice,
+    FaBrain,
+    FaChartLine
+} from "react-icons/fa6";
 
 export const navItems = [
     { label: "Beranda", href: "/" },
     { label: "Aktivitas & Artikel", href: "/post" },
-    { label: "Program", href: "/program" },
     { label: "Tentang Kami", href: "/tentang-kami" },
-    { label: "Kontak", href: "/kontak" }
+    { label: "Kontak", href: "/kontak" },
+    // { label: "Program", href: "/program" },
 ];
 
 // Hero Section
@@ -49,6 +57,16 @@ export const tentangSection = {
     description: "Kami adalah mitra pelaksana resmi dari program pemerintah untuk makan gratis siswa SD–SMA/SMK, dengan fokus pada transparansi, keberlanjutan, dan keberpihakan pada yang membutuhkan."
 };
 
+export const visi = "Menjadi yayasan pelopor dalam pemenuhan gizi siswa di Indonesia dengan menciptakan lingkungan belajar yang bebas dari kelaparan, sehingga setiap anak memiliki kesempatan yang setara untuk tumbuh, belajar, dan berkembang secara optimal.";
+export const misi = [
+  "Menyediakan makan siang bergizi gratis bagi siswa SD hingga SMA/SMK dari keluarga prasejahtera.",
+  "Bekerja sama dengan sekolah, pemerintah, dan mitra lokal untuk distribusi makanan yang aman dan tepat sasaran.",
+  "Mengedukasi masyarakat tentang pentingnya gizi seimbang bagi tumbuh kembang anak dan prestasi belajar.",
+  "Melakukan monitoring dan evaluasi berkala untuk menjamin kualitas dan keberlanjutan program.",
+  "Mendorong lahirnya ekosistem gotong royong di bidang pendidikan dan kesejahteraan anak."
+];
+
+
 // Program
 export const programSection = {
     name: "Program Makan Gratis Pelajar",
@@ -59,6 +77,27 @@ export const programSection = {
     menuType: "Nasi + lauk + sayur + buah + air mineral",
     schedule: "Senin – Jumat, pukul 11.00 – 13.00"
 };
+
+export const tujuanProgram = [
+    {
+        icon: <FaBowlRice />,
+        title: "Menurunkan Angka Kelaparan",
+        desc: "Memberikan akses makan siang bergizi untuk mengurangi kasus siswa yang belajar dalam kondisi lapar, terutama di daerah dengan tingkat ekonomi rendah."
+    },
+    {
+        icon: <FaBrain />,
+        title: "Meningkatkan Konsentrasi Belajar",
+        desc: "Asupan gizi yang cukup membantu siswa lebih fokus dalam menerima pelajaran di kelas dan meningkatkan performa akademik secara keseluruhan."
+    },
+    {
+        icon: <FaChartLine />,
+        title: "Mendorong Semangat & Partisipasi",
+        desc: "Makanan gratis menjadi insentif positif yang meningkatkan semangat belajar dan kehadiran siswa, terutama bagi mereka yang sebelumnya sering absen karena alasan ekonomi."
+    },
+    
+
+];
+
 
 export const programOverview = {
     description: `Program ini merupakan bagian dari kebijakan pemerintah dalam menjamin gizi seimbang bagi pelajar dari keluarga prasejahtera. Makanan didistribusikan melalui kantin sekolah dan mitra warung lokal setiap hari sekolah.`,
