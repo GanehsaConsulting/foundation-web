@@ -7,7 +7,7 @@
 
 @theme {
   /* Custom Brand Colors with light-dark() function */
-  --color-brand-main: light-dark(#bb7240, #CA7842);
+  --color-brand-main: light-dark(#bb7240, #ca7842);
   --color-brand-accent: light-dark(#7a9068, #b2cd9c);
   --color-brand-base: light-dark(#f0f2bd, #5f6048);
   --color-brand-neutral: light-dark(#f1f1f1, #252525);
@@ -30,7 +30,8 @@
   /* BoxShadow - Adjusted for light/dark compatibility */
   --shadow-custom: light-dark(
     rgba(17, 17, 26, 0.1) 0px 4px 16px rgba(17, 17, 26, 0.05) 0px 8px 32px,
-    rgba(255, 255, 255, 0.05) 0px 4px 16px rgba(255, 255, 255, 0.02) 0px 8px 32px
+    rgba(255, 255, 255, 0.05) 0px 4px 16px rgba(255, 255, 255, 0.02) 0px 8px
+      32px
   );
   --shadow-mainShadow: light-dark(
     rgba(149, 157, 165, 0.2) 0px 8px 24px,
@@ -41,7 +42,8 @@
     rgba(0, 0, 0, 0.3) 0px 2px 8px 0px
   );
   --shadow-brand-soft: light-dark(
-    rgba(255, 255, 255, 0.662) 0px 4px 16px rgba(255, 255, 255, 0.616) 0px 8px 32px,
+    rgba(255, 255, 255, 0.662) 0px 4px 16px rgba(255, 255, 255, 0.616) 0px 8px
+      32px,
     rgba(0, 0, 0, 0.258) 0px 4px 16px rgba(0, 0, 0, 0.268) 0px 8px 32px
   );
 }
@@ -180,38 +182,84 @@ body {
 /* Custom brand utility classes */
 @layer utilities {
   /* Background utilities */
-  .bg-brand-main { background-color: var(--color-brand-main); }
-  .bg-brand-accent { background-color: var(--color-brand-accent); }
-  .bg-brand-base { background-color: var(--color-brand-base); }
-  .bg-brand-neutral { background-color: var(--color-brand-neutral); }
-  .bg-brand-surface { background-color: var(--color-brand-surface); }
-  
+  .bg-brand-main {
+    background-color: var(--color-brand-main);
+  }
+  .bg-brand-accent {
+    background-color: var(--color-brand-accent);
+  }
+  .bg-brand-base {
+    background-color: var(--color-brand-base);
+  }
+  .bg-brand-neutral {
+    background-color: var(--color-brand-neutral);
+  }
+  .bg-brand-surface {
+    background-color: var(--color-brand-surface);
+  }
+
   /* Text utilities */
-  .text-brand-main { color: var(--color-brand-main); }
-  .text-brand-accent { color: var(--color-brand-accent); }
-  .text-brand-base { color: var(--color-brand-base); }
-  .text-brand-neutral { color: var(--color-brand-neutral); }
-  .text-brand-text { color: var(--color-brand-text); }
-  .text-brand-muted { color: var(--color-brand-text-muted); }
-  
+  .text-brand-main {
+    color: var(--color-brand-main);
+  }
+  .text-brand-accent {
+    color: var(--color-brand-accent);
+  }
+  .text-brand-base {
+    color: var(--color-brand-base);
+  }
+  .text-brand-neutral {
+    color: var(--color-brand-neutral);
+  }
+  .text-brand-text {
+    color: var(--color-brand-text);
+  }
+  .text-brand-muted {
+    color: var(--color-brand-text-muted);
+  }
+
   /* Border utilities */
-  .border-brand-main { border-color: var(--color-brand-main); }
-  .border-brand-accent { border-color: var(--color-brand-accent); }
-  .border-brand-neutral { border-color: var(--color-brand-neutral); }
-  
+  .border-brand-main {
+    border-color: var(--color-brand-main);
+  }
+  .border-brand-accent {
+    border-color: var(--color-brand-accent);
+  }
+  .border-brand-neutral {
+    border-color: var(--color-brand-neutral);
+  }
+
   /* Custom shadow utilities */
-  .shadow-brand-custom { box-shadow: var(--shadow-custom); }
-  .shadow-brand-main { box-shadow: var(--shadow-mainShadow); }
-  .shadow-brand-secondary { box-shadow: var(--shadow-secondaryShadow); }
-  .shadow-brand-soft { box-shadow: var(--shadow-brand-soft); }
-  
+  .shadow-brand-custom {
+    box-shadow: var(--shadow-custom);
+  }
+  .shadow-brand-main {
+    box-shadow: var(--shadow-mainShadow);
+  }
+  .shadow-brand-secondary {
+    box-shadow: var(--shadow-secondaryShadow);
+  }
+  .shadow-brand-soft {
+    box-shadow: var(--shadow-brand-soft);
+  }
+
   /* Custom radius utilities */
-  .rounded-brand-main { border-radius: var(--radius-main); }
-  .rounded-brand-secondary { border-radius: var(--radius-secondary); }
-  .rounded-brand-third { border-radius: var(--radius-third); }
-  .rounded-brand-btn { border-radius: var(--radius-btnMain); }
-  .rounded-brand-btn-sm { border-radius: var(--radius-btnSecondary); }
-  
+  .rounded-brand-main {
+    border-radius: var(--radius-main);
+  }
+  .rounded-brand-secondary {
+    border-radius: var(--radius-secondary);
+  }
+  .rounded-brand-third {
+    border-radius: var(--radius-third);
+  }
+  .rounded-brand-btn {
+    border-radius: var(--radius-btnMain);
+  }
+  .rounded-brand-btn-sm {
+    border-radius: var(--radius-btnSecondary);
+  }
+
   /* Component utilities */
   .btn-brand-primary {
     background-color: var(--color-brand-main);
@@ -220,12 +268,12 @@ body {
     box-shadow: var(--shadow-secondaryShadow);
     transition: all 0.2s ease;
   }
-  
+
   .btn-brand-primary:hover {
     box-shadow: var(--shadow-mainShadow);
     transform: translateY(-1px);
   }
-  
+
   .card-brand {
     background-color: var(--color-brand-surface);
     border: 1px solid var(--color-brand-neutral);
@@ -239,56 +287,57 @@ body {
 }
 
 .linear-blur {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    border-bottom-right-radius: 0rem;
-    border-bottom-left-radius: 0rem;
-    backdrop-filter: blur(10px);
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 50%,
-        rgba(255, 255, 255, 1) 100%
-    );
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 50%,
-        rgba(255, 255, 255, 1) 100%
-    );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  backdrop-filter: blur(10px);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .linear-blur-to-b {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    border-bottom-right-radius: 0rem;
-    border-bottom-left-radius: 0rem;
-    backdrop-filter: blur(15px);
-    mask-image: linear-gradient(
-        to top,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 70%,
-        rgba(255, 255, 255, 1) 100%
-    );
-    -webkit-mask-image: linear-gradient(
-        to top,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 70%,
-        rgba(255, 255, 255, 1) 100%
-    );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  backdrop-filter: blur(15px);
+  mask-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 .carousel2 {
-    display: inline-flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  display: inline-flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
+

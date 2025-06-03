@@ -1,3 +1,5 @@
+import { FaBowlFood, FaPeopleRoof, FaPeopleCarryBox, FaCheckDouble } from "react-icons/fa6";
+
 export const navItems = [
     { label: "Beranda", href: "/" },
     { label: "Aktivitas & Artikel", href: "/post" },
@@ -7,88 +9,88 @@ export const navItems = [
 ];
 
 // Hero Section
-const heroSection = {
-  title: "Makan Gratis, Masa Depan Berkualitas",
-  subtitle: "Program makan siang gratis untuk siswa SD hingga SMA/SMK sebagai upaya mendukung pendidikan dan kesehatan anak Indonesia.",
-  buttonText: "Lihat Program",
-  imageUrl: "/images/hero-anak-makan.jpg"
+export const heroSection = {
+    title: "Makan Gratis, Masa Depan Berkualitas",
+    subtitle: "Program makan siang gratis untuk siswa SD hingga SMA/SMK sebagai upaya mendukung pendidikan dan kesehatan anak Indonesia.",
+    buttonText: "Lihat Program",
+    imageUrl: "/images/hero-anak-makan.jpg"
 };
 
 // Keunggulan Program
-const keunggulanSection = [
-  {
-    icon: "🍛",
-    title: "Gizi Seimbang",
-    description: "Menu harian disusun oleh ahli gizi untuk mendukung tumbuh kembang anak."
-  },
-  {
-    icon: "🏫",
-    title: "Tepat Sasaran",
-    description: "Diberikan kepada siswa dari keluarga prasejahtera yang diverifikasi oleh sekolah dan dinas sosial."
-  },
-  {
-    icon: "🤝",
-    title: "Kolaboratif",
-    description: "Bekerja sama dengan warung lokal dan kantin sekolah untuk pemberdayaan ekonomi."
-  },
-  {
-    icon: "📊",
-    title: "Terukur",
-    description: "Pelaporan data distribusi makanan dilakukan setiap minggu melalui sistem terintegrasi."
-  }
+export const keunggulanSection = [
+    {
+        icon: <FaBowlFood/>,
+        title: "Gizi Seimbang",
+        description: "Menu harian disusun oleh ahli gizi untuk mendukung tumbuh kembang anak."
+    },
+    {
+        icon: <FaPeopleRoof/>,
+        title: "Tepat Sasaran",
+        description: "Diberikan kepada siswa dari keluarga prasejahtera yang diverifikasi oleh sekolah dan dinas sosial."
+    },
+    {
+        icon: <FaPeopleCarryBox/>,
+        title: "Kolaboratif",
+        description: "Bekerja sama dengan warung lokal dan kantin sekolah untuk pemberdayaan ekonomi."
+    },
+    {
+        icon: <FaCheckDouble/>,
+        title: "Terukur",
+        description: "Pelaporan data distribusi makanan dilakukan setiap minggu melalui sistem terintegrasi."
+    }
 ];
 
 // Tentang Yayasan
-const tentangSection = {
-  name: "Yayasan Aksata Cendekia Nusantara",
-  established: 2021,
-  mission: "Mewujudkan generasi sehat dan cerdas melalui pemenuhan gizi bagi pelajar secara berkelanjutan.",
-  vision: "Indonesia tanpa kelaparan di bangku sekolah.",
-  description: "Kami adalah mitra pelaksana resmi dari program pemerintah untuk makan gratis siswa SD–SMA/SMK, dengan fokus pada transparansi, keberlanjutan, dan keberpihakan pada yang membutuhkan."
+export const tentangSection = {
+    name: "Yayasan Aksata Cendekia Nusantara",
+    established: 2021,
+    mission: "Mewujudkan generasi sehat dan cerdas melalui pemenuhan gizi bagi pelajar secara berkelanjutan.",
+    vision: "Indonesia tanpa kelaparan di bangku sekolah.",
+    description: "Kami adalah mitra pelaksana resmi dari program pemerintah untuk makan gratis siswa SD–SMA/SMK, dengan fokus pada transparansi, keberlanjutan, dan keberpihakan pada yang membutuhkan."
 };
 
 // Program
-const programSection = {
-  name: "Program Makan Gratis Pelajar",
-  target: "Siswa SD hingga SMA/SMK dari keluarga tidak mampu",
-  activeCities: ["Jakarta Timur", "Bekasi", "Yogyakarta", "Bandung"],
-  currentBeneficiaries: 1280,
-  goal2026: 5000,
-  menuType: "Nasi + lauk + sayur + buah + air mineral",
-  schedule: "Senin – Jumat, pukul 11.00 – 13.00"
+export const programSection = {
+    name: "Program Makan Gratis Pelajar",
+    target: "Siswa SD hingga SMA/SMK dari keluarga tidak mampu",
+    activeCities: ["Jakarta Timur", "Bekasi", "Yogyakarta", "Bandung"],
+    currentBeneficiaries: 1280,
+    goal2026: 5000,
+    menuType: "Nasi + lauk + sayur + buah + air mineral",
+    schedule: "Senin – Jumat, pukul 11.00 – 13.00"
 };
 
 // Lokasi Aktif
-const lokasiSection = [
-  {
-    kota: "Jakarta Timur",
-    sekolah: 12,
-    siswa: 380
-  },
-  {
-    kota: "Bekasi",
-    sekolah: 8,
-    siswa: 300
-  },
-  {
-    kota: "Yogyakarta",
-    sekolah: 6,
-    siswa: 260
-  },
-  {
-    kota: "Bandung",
-    sekolah: 5,
-    siswa: 340
-  }
+export const lokasiSection = [
+    {
+        kota: "Jakarta Timur",
+        sekolah: 12,
+        siswa: 380
+    },
+    {
+        kota: "Bekasi",
+        sekolah: 8,
+        siswa: 300
+    },
+    {
+        kota: "Yogyakarta",
+        sekolah: 6,
+        siswa: 260
+    },
+    {
+        kota: "Bandung",
+        sekolah: 5,
+        siswa: 340
+    }
 ];
 
 // Kontak
-const kontakSection = {
-  alamat: "Jl. H. Nawi No. 88, Jakarta Selatan, DKI Jakarta",
-  telepon: "021-1234567",
-  whatsapp: "0812-3456-7890",
-  email: "info@aksatacendekia.or.id",
-  instagram: "@aksata.cendekia"
+export const kontakSection = {
+    alamat: "Jl. H. Nawi No. 88, Jakarta Selatan, DKI Jakarta",
+    telepon: "021-1234567",
+    whatsapp: "0812-3456-7890",
+    email: "info@aksatacendekia.or.id",
+    instagram: "@aksata.cendekia"
 };
 
 

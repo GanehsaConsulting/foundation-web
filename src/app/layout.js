@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${fredoka.className} antialiased`}
+        className={`${fredoka.className} antialiased `}
       >
         <ThemeProvider enableSystem attribute={'class'}>
           <Navbar>
