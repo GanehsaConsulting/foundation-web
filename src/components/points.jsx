@@ -4,7 +4,7 @@ export const Points = () => {
     return (
         <main className="margin my-10">
             <h1 className="text-3xl font-bold mb-5">
-                Kunggulan Kami
+                Bagaimana Cara Kerja Kami
             </h1>
             <section
                 className="grid grid-cols-4 gap-3"

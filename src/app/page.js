@@ -2,6 +2,7 @@ import { CardCarousel } from "@/components/card-carousel";
 import { HeroHome } from "@/components/hero-home";
 import { DataArticles, keunggulanSection } from "./system";
 import { Points } from "@/components/points";
+import { AbotUs } from "@/components/about-us";
 
 export default function Home() {
   const activity = DataArticles.filter((article) => article.category === "Activity");
@@ -9,6 +10,8 @@ export default function Home() {
   return (
     <>
       <HeroHome />
+      
+      <AbotUs/>
 
       <Points/>
 
