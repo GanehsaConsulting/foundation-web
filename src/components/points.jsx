@@ -1,11 +1,14 @@
 import { keunggulanSection } from "@/app/system";
+import { Title } from "./title";
 
 export const Points = () => {
     return (
         <main className="margin my-10">
-            <h1 className="text-3xl font-bold mb-5">
-                Bagaimana Cara Kerja Kami
-            </h1>
+            <Title
+                className={"mb-5"}
+                highlight=" Bagaimana Cara"
+                accent="Kerja Kami"
+            />
             <section
                 className="grid grid-cols-4 gap-3"
             >

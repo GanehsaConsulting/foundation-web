@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowLeftIcon, ArrowRight, ArrowRightIcon, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { Title } from "./title";
 
 export const CardCarousel = ({
     articles = [],
@@ -17,7 +18,6 @@ export const CardCarousel = ({
     showViewAllButton = false,
     viewAllButtonHref = "/artikel",
     viewAllButtonText = "Cek Semua",
-    viewAllButtonClassName = "text-brand-main",
     viewAllButtonIcon = <ChevronRight />,
     cardMinWidth = "40vh",
     gap = "3",
@@ -70,13 +70,14 @@ export const CardCarousel = ({
             {showTopLabel && (
                 <div className="margin mt-10 mb-5 flex items-center justify-between">
                     <div>
-                        <h1 className="text-3xl font-bold">
-                            {topLabelTitle}
-                        </h1>
+                        <Title
+                        highlight={topLabelTitle.split(" ")[0]}
+                        accent={topLabelTitle.split(" ").slice(1).join(" ")}    
+                        />
                         <Button
                             onClick={() => route.push(viewAllButtonHref)}
                             size={"none"}
-                            className={`text-brand-main ${viewAllButtonClassName} !p-0 !hover:p-5`}
+                            className={`text-muted-foreground !p-0 !hover:p-5`}
                             variant={"ghost"}
                         >
                             {viewAllButtonIcon}
