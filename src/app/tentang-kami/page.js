@@ -1,7 +1,7 @@
-import { AbotUs } from "@/components/about-us";
+import AnimateOnScroll from "@/components/animate-on-scroll";
 import PageBanner from "@/components/page-banner";
+import { AbotUs } from "@/components/about-us";
 import { Points } from "@/components/points";
-import { ProgramOverview } from "@/components/program-overview";
 import { VisiMisi } from "@/components/visi-misi";
 
 export default function TentangPage() {
@@ -13,11 +13,16 @@ export default function TentangPage() {
                 description="Yayasan Piring Harapan berdedikasi untuk memastikan setiap anak mendapat asupan gizi layak. Kenali lebih dalam visi, misi, dan perjalanan kami"
             />
 
-            <AbotUs />
+            <AnimateOnScroll once={false} animation="blurInUp" duration={0.5} delay={0.3}>
+                <AbotUs />
+            </AnimateOnScroll>
+            <AnimateOnScroll once={false} animation="blurInUp" duration={0.5} delay={0.3}>
+                <VisiMisi />
+            </AnimateOnScroll>
+            <AnimateOnScroll once={false} animation="blurInUp" duration={0.5} delay={0.3}>
+                <Points />
+            </AnimateOnScroll>
 
-            <VisiMisi />
-            
-            <Points />
         </>
     );
 }
