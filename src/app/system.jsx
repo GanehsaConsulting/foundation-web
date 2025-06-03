@@ -19,22 +19,22 @@ export const heroSection = {
 // Keunggulan Program
 export const keunggulanSection = [
     {
-        icon: <FaBowlFood/>,
+        icon: <FaBowlFood />,
         title: "Gizi Seimbang",
         description: "Menu harian disusun oleh ahli gizi untuk mendukung tumbuh kembang anak."
     },
     {
-        icon: <FaPeopleRoof/>,
+        icon: <FaPeopleRoof />,
         title: "Tepat Sasaran",
         description: "Diberikan kepada siswa dari keluarga prasejahtera yang diverifikasi oleh sekolah dan dinas sosial."
     },
     {
-        icon: <FaPeopleCarryBox/>,
+        icon: <FaPeopleCarryBox />,
         title: "Kolaboratif",
         description: "Bekerja sama dengan warung lokal dan kantin sekolah untuk pemberdayaan ekonomi."
     },
     {
-        icon: <FaCheckDouble/>,
+        icon: <FaCheckDouble />,
         title: "Terukur",
         description: "Pelaporan data distribusi makanan dilakukan setiap minggu melalui sistem terintegrasi."
     }
@@ -59,6 +59,17 @@ export const programSection = {
     menuType: "Nasi + lauk + sayur + buah + air mineral",
     schedule: "Senin – Jumat, pukul 11.00 – 13.00"
 };
+
+export const programOverview = {
+    description: `Program ini merupakan bagian dari kebijakan pemerintah dalam menjamin gizi seimbang bagi pelajar dari keluarga prasejahtera. Makanan didistribusikan melalui kantin sekolah dan mitra warung lokal setiap hari sekolah.`,
+    tujuan: [
+        "Menurunkan angka kelaparan di lingkungan sekolah.",
+        "Mendukung konsentrasi belajar siswa.",
+        "Meningkatkan partisipasi dan semangat belajar."
+    ],
+    sasaran: "Siswa SD, SMP, dan SMA/SMK dari keluarga tidak mampu, berdasarkan data dari sekolah dan dinas sosial."
+};
+
 
 // Lokasi Aktif
 export const lokasiSection = [

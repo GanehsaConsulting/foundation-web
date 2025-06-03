@@ -15,7 +15,7 @@ export const Points = () => {
                 {keunggulanSection.map((el, idx) => (
                     <div
                         key={idx}
-                        className="h-full flex flex-col p-5 rounded-main shadow-custom bg-gradient-to-b from-brand-accent/10 to-brand-base/50">
+                        className="duration-300 ease-in-out hover:-translate-y-2 hover:hue-rotate-60 h-full flex flex-col p-5 rounded-main shadow-custom bg-gradient-to-b from-brand-accent/10 to-brand-base/50">
                         <div className="min-h-[20vh] text-4xl text-brand-main">
                             {el.icon}
                         </div>
